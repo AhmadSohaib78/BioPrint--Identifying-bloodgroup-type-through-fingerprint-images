@@ -1,4 +1,4 @@
-**BioPrint: Identifying Blood Group Type Through Fingerprint Images
+**BioType: Identifying Blood Group Type Through Fingerprint Images
 Overview**
 
 BioPrint is a Final Year Project that predicts a person’s blood group using fingerprint images.
