@@ -1,36 +1,37 @@
-BioPrint – Identifying Blood Group Type Through Fingerprint Images
-Overview
+**BioPrint: Identifying Blood Group Type Through Fingerprint Images
+Overview**
 
 BioPrint is a Final Year Project that predicts a person’s blood group using fingerprint images.
-It uses deep learning on fingerprint patterns and provides results through a web interface.
+It uses deep learning and shows results through a web application.
 
 The system has:
 
-a backend API (FastAPI + PyTorch)
+a backend API built with FastAPI and PyTorch
 
-a frontend website (HTML, CSS, JavaScript)
+a frontend website built with HTML, CSS, and JavaScript
 
 Blood Groups Supported
 
 The model predicts 8 blood groups:
 
-A+, A-
+A+, A−
 
-B+, B-
+B+, B−
 
-AB+, AB-
+AB+, AB−
 
-O+, O-
+O+, O−
 
+**Project Structure**
 BIOPRINT/
 │
 ├── backend/
-│   ├── main.py            # FastAPI server
-│   ├── inference.py       # Model loading + prediction logic
+│   ├── main.py              # FastAPI server
+│   ├── inference.py         # Model loading and prediction logic
 │   ├── requirements.txt
 │   ├── model/
 │   │   └── efficientnet_b0.pth
-│   └── media/             # Saved images (auto-created)
+│   └── media/               # Saved images (auto-created)
 │
 ├── frontend/
 │   ├── index.html
@@ -39,152 +40,82 @@ BIOPRINT/
 │   ├── style.css
 │   └── script.js
 │
+├── .gitignore
+└── README.md
 
-How the System Works (Simple Flow)
+**How the System Works (Simple Flow)**
 
-User uploads a fingerprint image from the frontend
+1. User uploads a fingerprint image from the frontend
+2. Image is sent to the backend /predict API
+3. Image preprocessing is applied:
+3.1. convert to grayscale
+3.2. resize to 224 × 224
+3.3. apply CLAHE for better contrast
+3.4. apply blur and sharpening
+4. Image is passed to EfficientNet-B0
+5. Model predicts blood group and confidence
+6. Backend sends back:
+6.1. predicted blood group
+6.2. confidence percentage
+6.3. original image
+6.4. preprocessed image
+7. Frontend displays the result clearly
 
-Image is sent to the backend /predict API
+**Model Details**
 
-Image preprocessing is applied:
+1. Architecture: EfficientNet-B0
+2. Framework: PyTorch
+3. Input Size: 224 × 224
+4. Classes: 8 blood groups
+5. Device: CPU or GPU (auto detected)
+The model is loaded once at startup to make predictions faster.
 
-grayscale
-
-resize to 224×224
-
-CLAHE (contrast enhancement)
-
-blur and sharpening
-
-Image is passed to EfficientNet-B0
-
-Model predicts blood group and confidence
-
-Backend returns:
-
-predicted blood group
-
-confidence percentage
-
-original image
-
-preprocessed image
-
-Frontend shows the result visually
-
-Model Details
-
-Architecture: EfficientNet-B0
-
-Framework: PyTorch
-
-Input size: 224 × 224
-
-Classes: 8 blood groups
-
-Device: CPU or GPU (auto-detected)
-
-The model is loaded once at startup for fast predictions.
-
-Backend (FastAPI)
+**Backend (FastAPI)**
 Start Backend
 
-From the backend folder:
-
+Run this command from the backend folder:
 python main.py
 
-
-The API runs at:
-
+The API will run at:
 http://127.0.0.1:8000
 
-API Endpoints
-
-GET /
-Checks if API is running
-
-POST /predict
-Upload fingerprint image and get prediction
-
-Frontend
-
+**Frontend**
 The frontend is a simple static website.
+How it Works
+**User drags or selects a fingerprint image**
+The page shows:
+1. original image
+2. preprocessed image
+3. predicted blood group
+4. confidence percentage
+Frontend communicates with backend using the JavaScript Fetch API.
 
-How it works
+**Technologies Used
+Backend**
+1. Python
+2. FastAPI
+3. PyTorch
+4. Torchvision
+5. OpenCV
+6. PIL
+7. Uvicorn
 
-Drag & drop or browse fingerprint image
+**Frontend**
+1. HTML
+2. CSS
+3. JavaScript
 
-Shows:
-
-original image
-
-preprocessed image
-
-predicted blood group
-
-confidence
-
-Frontend communicates with backend using JavaScript Fetch API.
-
-Technologies Used
-Backend
-
-Python
-
-FastAPI
-
-PyTorch
-
-Torchvision
-
-OpenCV
-
-PIL
-
-Uvicorn
-
-Frontend
-
-HTML
-
-CSS
-
-JavaScript
-
-Important Notes
-
-Model file efficientnet_b0.pth must be placed inside:
-
+**Important Notes**
+The model file efficientnet_b0.pth must be placed inside:
 backend/model/
-
 
 The media folder is created automatically
 
 .gitignore is used to avoid uploading:
+1. virtual environment
+2. cache files
+3. large unnecessary files
 
-virtual environment
-
-cache files
-
-large model artifacts (if needed)
-
-Project Purpose
-
-This project explores biometric identification using fingerprints to predict blood group types, providing a non-invasive and automated approach for research and academic study.
-
-Author
-
-Ahmad Sohaib
-Final Year Project – Data Science
-
-If you want next, I can:
-
-simplify this README even more
-
-make it IEEE / university format
-
-add API examples
-
-help you write project abstract
-├── .gitignore
-└── README.md
+**Project Purpose**
+This project studies biometric identification by using fingerprints to predict blood group types.
+It provides a non-invasive, automated, and research-focused solution.
