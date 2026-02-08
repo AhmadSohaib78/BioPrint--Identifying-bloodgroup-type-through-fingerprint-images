@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BioType — Predict Blood Type from Fingerprint</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+            <defs><linearGradient id="g1"><stop offset="0" stop-color="#3ee7ff"/><stop offset="1" stop-color="#a66bff"/></linearGradient></defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#g1)"/>
+          </svg>
+        </div>
+        <div class="brand-text"><div class="title">BioType</div><div class="subtitle">AI Blood Prediction</div></div>
+      </div>
+      <nav class="menu"><a href="about.html" class="menu-item">About</a><a href="research.html" class="menu-item">Research</a><a href="index.html" class="menu-item">Home</a></nav>
+    </div>
+  </header>
+
+  <!-- Preview squares (centered, equal-sized) -->
+  <section class="preview-section">
+    <div class="preview-box">
+      <div class="col-title">Original</div>
+      <div class="square">
+        <div id="origPlaceholder" class="placeholder">No image</div>
+        <img id="origPreview" class="preview-img hidden" alt="Original preview"/>
+      </div>
+    </div>
+
+    <div class="preview-box">
+      <div class="col-title">Preprocessed</div>
+      <div class="square">
+        <div id="prePlaceholder" class="placeholder">Waiting</div>
+        <img id="prePreview" class="preview-img hidden" alt="Preprocessed preview"/>
+      </div>
+    </div>
+
+    <div class="preview-box">
+      <div class="col-title">Prediction</div>
+      <div class="square">
+        <div id="predPlaceholder" class="placeholder">No result<br><span style="font-size:12px;color:#6ea9ae">Confidence: 0%</span></div>
+        <div id="predictionCard" class="pred-card hidden">
+          <div id="predLabel" class="pred-label">A+</div>
+          <div id="predConf" class="pred-conf">Confidence: 0%</div>
+          <button id="tryAgain" class="btn">Try another</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload section below previews -->
+  <section class="upload-section">
+    <div class="upload-area" id="uploadArea">
+      <input id="fileInput" type="file" accept="image/*" hidden />
+      <div class="upload-inner">
+        <div class="upload-icon">↑</div>
+        <div class="upload-text">
+          <div class="upload-title">Upload Fingerprint</div>
+          <div class="upload-sub">Drag & drop or <span class="btn-link" id="browseBtn">click to select</span></div>
+          <div class="formats">PNG · JPG · WEBP</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="statusPanel" class="status-panel hidden">
+      <div id="loadingSpinner" class="spinner"></div>
+      <div id="statusText" class="status-text">Analyzing...</div>
+    </div>
+  </section>
+
+<section class="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">
+        Our advanced AI analyzes fingerprint ridge patterns to predict your blood type with high accuracy.
+    </p>
+
+    <div class="hiw-grid">
+
+        <div class="hiw-card">
+            <div class="hiw-number">1</div>
+            <div class="hiw-icon">⬆</div>
+            <h3 class="hiw-title">Upload</h3>
+            <p class="hiw-desc">Submit a clear fingerprint image from your device.</p>
+        </div>
+
+        <div class="hiw-card">
+            <div class="hiw-number">2</div>
+            <div class="hiw-icon">⚙</div>
+            <h3 class="hiw-title">Analyze</h3>
+            <p class="hiw-desc">AI examines ridge patterns and applies preprocessing.</p>
+        </div>
+
+        <div class="hiw-card">
+            <div class="hiw-number">3</div>
+            <div class="hiw-icon">🔍</div>
+            <h3 class="hiw-title">Predict</h3>
+            <p class="hiw-desc">Deep-learning model predicts your blood group.</p>
+        </div>
+
+        <div class="hiw-card">
+            <div class="hiw-number">4</div>
+            <div class="hiw-icon">📄</div>
+            <h3 class="hiw-title">Results</h3>
+            <p class="hiw-desc">View predicted blood type with confidence score.</p>
+        </div>
+
+    </div>
+</section>
+
+  </main>
+
+  <footer class="footer">BioType • Local demo</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

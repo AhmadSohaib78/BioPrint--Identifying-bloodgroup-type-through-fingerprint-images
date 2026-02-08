@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOPRINT – Research</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* --- Page Specific Styles --- */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+        }
+        .hero p {
+            max-width: 700px;
+            margin: 10px auto;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 130px;
+            font-weight: 700;
+        }
+
+        .text-block {
+            max-width: 900px;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .research-card {
+            background: #0d1117;
+            border: 1px solid rgba(0, 195, 255, 0.4);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            transition: 0.25s ease-in-out;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
+        }
+
+        .research-card h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .timeline {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #0d1117;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
+        }
+
+        .timeline-steps {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .timeline-step {
+            width: 20%;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .metric-card {
+            background: #0d1117;
+            border: 1px solid rgba(0, 195, 255, 0.4);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            transition: 0.25s ease-in-out;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- NAV (same as index.html) -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+            <defs><linearGradient id="g1"><stop offset="0" stop-color="#3ee7ff"/><stop offset="1" stop-color="#a66bff"/></linearGradient></defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#g1)"/>
+          </svg>
+        </div>
+        <div class="brand-text"><div class="title">BioType</div><div class="subtitle">AI Blood Prediction</div></div>
+      </div>
+      <nav class="menu"><a href="about.html" class="menu-item">About</a><a href="research.html" class="menu-item">Research</a><a href="index.html" class="menu-item">Home</a></nav>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>BIOPRINT Research & Scientific Foundation</h1>
+    <p>Understanding the deep learning and image-processing techniques behind non-invasive blood group prediction using fingerprint patterns.</p>
+</section>
+
+<!-- Motivation -->
+<h2 class="section-title">Why This Research?</h2>
+<p class="text-block">
+    Traditional blood typing requires invasive sampling, trained medical staff, and specialized equipment. 
+    BIOPRINT aims to introduce a non-invasive, low-cost, rapid solution by analyzing fingerprint ridge patterns using AI, 
+    enabling broader access to essential blood group information in emergency and rural settings.
+</p>
+
+<!-- Cards -->
+<h2 class="section-title">Methodology</h2>
+<div class="card-grid">
+    <div class="research-card">
+        <h3>Dataset</h3>
+        <p>Kaggle fingerprint datasets with blood group labels — curated, cleaned, and validated.</p>
+    </div>
+
+    <div class="research-card">
+        <h3>Preprocessing</h3>
+        <p>CLAHE, Gaussian smoothing, sharpening, and ridge enhancement for high-quality inputs.</p>
+    </div>
+
+    <div class="research-card">
+        <h3>Model Architecture</h3>
+        <p>CNN, ViT, SVM, and Random Forest pipelines trained on fingerprint features.</p>
+    </div>
+
+    <div class="research-card">
+        <h3>Training & Evaluation</h3>
+        <p>80/20 split, cross-validation, categorical loss, and metrics monitoring.</p>
+    </div>
+</div>
+
+<!-- Pipeline -->
+<h2 class="section-title">AI Prediction Pipeline</h2>
+<div class="timeline">
+    <div class="timeline-steps">
+        <div class="timeline-step">Image Input</div>
+        <div class="timeline-step">Preprocessing</div>
+        <div class="timeline-step">Feature Extraction</div>
+        <div class="timeline-step">Deep Learning Model</div>
+        <div class="timeline-step">Blood Group Output</div>
+    </div>
+</div>
+
+<!-- Metrics -->
+<h2 class="section-title">Model Performance</h2>
+<div class="metrics-grid">
+    <div class="metric-card">Accuracy: 98.4%</div>
+    <div class="metric-card">Precision: 97.9%</div>
+    <div class="metric-card">Recall: 97.2%</div>
+    <div class="metric-card">F1 Score: 97.5%</div>
+</div>
+<footer class="footer">BioType • Local demo</footer>
+</body>
+</html>

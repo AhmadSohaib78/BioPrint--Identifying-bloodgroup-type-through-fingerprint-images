@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BIOPRINT</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 42px; font-weight: 700; }
+        .hero p { max-width: 700px; margin: 10px auto; font-size: 18px; color: #ffffff; }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 130px;
+            font-weight: 700;
+        }
+
+        .mission {
+            max-width: 900px;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .team-card {
+            background: #0d1117;
+            border: 1px solid rgba(0, 195, 255, 0.4);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            transition: 0.25s ease-in-out;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
+        }
+
+        .team-card h3 {
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .value-card {
+            background: #0d1117;
+            border: 1px solid rgba(0, 195, 255, 0.4);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            transition: 0.25s ease-in-out;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
+        }
+
+        .future-block {
+            max-width: 900px;
+            margin: 40px auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+            <defs><linearGradient id="g1"><stop offset="0" stop-color="#3ee7ff"/><stop offset="1" stop-color="#a66bff"/></linearGradient></defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#g1)"/>
+          </svg>
+        </div>
+        <div class="brand-text"><div class="title">BioType</div><div class="subtitle">AI Blood Prediction</div></div>
+      </div>
+      <nav class="menu"><a href="about.html" class="menu-item">About</a><a href="research.html" class="menu-item">Research</a><a href="index.html" class="menu-item">Home</a></nav>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>About BIOPRINT</h1>
+    <p>Our mission is to revolutionize healthcare diagnostics through artificial intelligence and fingerprint biometrics.</p>
+</section>
+
+<!-- Mission -->
+<h2 class="section-title">Our Mission</h2>
+<p class="mission">
+    BIOPRINT aims to provide a non-invasive, fast, and accessible method to predict blood groups using advanced deep learning models. 
+    Our project pushes the boundaries of AI in healthcare while maintaining a focus on accuracy, innovation, and reliability.
+</p>
+
+<!-- Team -->
+<h2 class="section-title">Meet the Team</h2>
+<div class="team-grid">
+    <div class="team-card">
+        <h3>Rafay Ahmad</h3>
+        <p>AI Engineer & Research Lead</p>
+    </div>
+
+    <div class="team-card">
+        <h3>Ahmad Sohaib</h3>
+        <p>Backend Developer</p>
+    </div>
+
+    <div class="team-card">
+        <h3>Anwaar Muhammad</h3>
+        <p>UI/UX Designer</p>
+    </div>
+</div>
+
+<!-- Values -->
+<h2 class="section-title">Our Core Values</h2>
+<div class="values-grid">
+    <div class="value-card">✔ Accuracy & Safety<br>Ensuring every prediction is trustworthy.</div>
+    <div class="value-card">✔ Innovation<br>Integrating cutting-edge AI technologies.</div>
+    <div class="value-card">✔ Accessibility<br>Making diagnostics available to everyone.</div>
+</div>
+
+<!-- Future -->
+<h2 class="section-title">Future Plans</h2>
+<p class="future-block">
+    BIOPRINT aims to enhance prediction accuracy, expand datasets, support mobile deployment, and integrate with hospital information systems. 
+    Future updates may include blood-related disease predictions, live fingerprint scanning, and region-specific biometric calibration.
+</p>
+<footer class="footer">BioType • Local demo</footer>
+</body>
+</html>
